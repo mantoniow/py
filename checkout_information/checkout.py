@@ -8,7 +8,7 @@ def send_checkout_inf(browser):
     wait_for_page_load(browser)
 
     browser.find_element(By.XPATH ,"//span[contains(.,'CHECKOUT')]").click()
-    wait_for_page_load(browser)
+    time.sleep(10)
 
     browser.find_element(By.XPATH ,"//input[@name='address[full_name]']").send_keys("Marco Antonio Wong Chu")
     browser.find_element(By.XPATH ,"//input[@name='address[telephone]']").send_keys("(347) 541-9628")
