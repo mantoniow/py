@@ -33,7 +33,7 @@ def main():
         #SELECT PRODUCTS CATEGORY MEN
         men.select_prd_category_men(browser)
 
-        #FILL CHECKOUT INFORMATION
+        #FILL CHECKOUT OR PAYMENT INFORMATION
         checkout.send_checkout_inf(browser)
 
         #SELECT PAYMENT METHOD
