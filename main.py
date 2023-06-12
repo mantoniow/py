@@ -9,14 +9,15 @@ from category_women import women
 from category_men import men
 from checkout_information import checkout
 from payment_method import payment
+from utilities import config
 def main():
 
     #CREATE INSTANCE BROWSER
-    service = Service(executable_path="C:\\Users\\manto\\Desktop\\chromedriver.exe")
+    service = Service(executable_path= config.PATH_CHROME_DRIVER)
     options = Options()
     options.add_argument('ignore-certificate-errors')
     options.add_argument('window-size=1920x1080')
-    options.binary_location = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
+    options.binary_location = config.PATH_CHROME_EXECUTABLE
     browser = webdriver.Chrome(service=service, options=options)
 
     try:
